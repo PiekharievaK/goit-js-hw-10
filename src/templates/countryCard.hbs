@@ -1,0 +1,12 @@
+<div>
+    <div class="cards-item"> <img src="{{flags.svg}}" width="100px" />
+        <h2>{{name.official}}</h2>
+    </div>
+    <p>Capital: <span class="">{{capital}}</span> </p>
+    <p>Population: <span class="">{{population}}</span> </p>
+    <p>Languages:
+        {{#each languages}} 
+         {{#unless @last}}<span>{{this}},</span> {{/unless}} 
+         {{#if @last}}<span>{{this}}</span>{{/if}}
+       {{/each}}</p>
+</div>
