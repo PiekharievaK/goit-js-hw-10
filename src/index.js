@@ -37,7 +37,8 @@ function createMarkup(countriesArr) {
             countryInfo.innerHTML = `${CountryCard(countriesArr[0])}`;
         }
         if (countriesArr.length > 1 && countriesArr.length < 10) {
-             countryInfo.innerHTML ='';
+            countryInfo.innerHTML = '';
+            countryList.innerHTML ='';
             countriesArr.forEach(element => {
              countryList.insertAdjacentHTML(`beforeend`, CountriesList(element))
           });          
