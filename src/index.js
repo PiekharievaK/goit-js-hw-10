@@ -9,6 +9,7 @@ const BASE_URL = 'https://restcountries.com/v3.1/name/';
 const URL_PARAMS = `name,capital,population,flags,languages`;
 const DEBOUNCE_DELAY = 300;
 const countryList = document.querySelector(`.country-list`);
+const countryInfo = document.querySelector(`.country-info`);
 const findField = document.querySelector(`#search-box`)
 
 findField.addEventListener(`input`,  debounce(onFindfield, DEBOUNCE_DELAY))
@@ -31,11 +32,12 @@ function onFindfield(evt) {
 
 function createMarkup(countriesArr) {
      
-        if (countriesArr.length === 1) {
-            countryList.innerHTML = `${CountryCard(countriesArr[0])}`;
+    if (countriesArr.length === 1) {
+        countryList.innerHTML = '';
+            countryInfo.innerHTML = `${CountryCard(countriesArr[0])}`;
         }
         if (countriesArr.length > 1 && countriesArr.length < 10) {
-             countryList.innerHTML ='';
+             countryInfo.innerHTML ='';
             countriesArr.forEach(element => {
              countryList.insertAdjacentHTML(`beforeend`, CountriesList(element))
           });          

@@ -19,9 +19,15 @@ body {
   margin-bottom: 16px;
 }
 
+.country-list {
+  margin: 0;
+  padding: 0;
+}
+
 .cards-item {
   display: flex;
   align-items: center;
+  margin: 5px;
 }
 
 li {
@@ -36,4 +42,11 @@ p {
 p span {
   font-weight: 400;
   font-size: 16px;
+}
+
+h3 {
+  margin: 0;
+}
+img {
+  margin-right: 10px;
 }
