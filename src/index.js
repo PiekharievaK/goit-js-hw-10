@@ -8,6 +8,7 @@ import debounce  from 'lodash.debounce';
 const BASE_URL = 'https://restcountries.com/v3.1/name/';
 const URL_PARAMS = `name,capital,population,flags,languages`;
 const DEBOUNCE_DELAY = 300;
+
 const countryList = document.querySelector(`.country-list`);
 const countryInfo = document.querySelector(`.country-info`);
 const findField = document.querySelector(`#search-box`)
@@ -49,5 +50,5 @@ function createMarkup(countriesArr) {
 };
 
 function onReject() {
-    Notiflix.Notify.failure(`Oops, there is no country with that name`)
+    Notiflix.Notify.failure(`Oops, there is no country with that name`);
 };
