@@ -40,7 +40,7 @@ function createMarkup(countriesArr) {
         countryList.innerHTML = '';
             countryInfo.innerHTML = `${CountryCard(countriesArr[0])}`;
         }
-    if (countriesAmount > 1 && countriesAmount < 10) {
+    if (countriesAmount > 1 && countriesAmount <= 10) {
         clearCoutnryField()
             
             countriesArr.forEach(element => {
