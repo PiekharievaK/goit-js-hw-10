@@ -32,23 +32,30 @@ function onFindfield(evt) {
 };
 
 function createMarkup(countriesArr) {
-     
-    if (countriesArr.length === 1) {
+    const countriesAmount = countriesArr.length;
+    
+    clearCoutnryField()
+        
+    if (countriesAmount === 1) {
         countryList.innerHTML = '';
             countryInfo.innerHTML = `${CountryCard(countriesArr[0])}`;
         }
-        if (countriesArr.length > 1 && countriesArr.length < 10) {
-            countryInfo.innerHTML = '';
-            countryList.innerHTML ='';
+    if (countriesAmount > 1 && countriesAmount < 10) {
+        clearCoutnryField()
+            
             countriesArr.forEach(element => {
              countryList.insertAdjacentHTML(`beforeend`, CountriesList(element))
           });          
         }
-        if (countriesArr.length > 10) {
+    if (countriesAmount > 10) {
             Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
         }
 };
 
 function onReject() {
     Notiflix.Notify.failure(`Oops, there is no country with that name`);
+};
+function clearCoutnryField() {
+     countryList.innerHTML = '';
+    countryInfo.innerHTML = '';    
 };
