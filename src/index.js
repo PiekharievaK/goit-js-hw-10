@@ -53,7 +53,8 @@ function createMarkup(countriesArr) {
 };
 
 function onReject() {
-    Notiflix.Notify.failure(`Oops, there is no country with that name`);
+clearCoutnryField() 
+Notiflix.Notify.failure(`Oops, there is no country with that name`);
 };
 function clearCoutnryField() {
      countryList.innerHTML = '';
